@@ -30,7 +30,7 @@ class Agenda {
         for (let i = 0; i < this.contactos.length; i++) {
             nombres.push(this.contactos[i].nombre);
         }
-        return nombres.sort();
+        document.getElementById('contactos').innerHTML = nombres;
     }
 
     borrarContacto(nombre) {

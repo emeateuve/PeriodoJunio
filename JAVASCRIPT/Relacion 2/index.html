@@ -7,5 +7,38 @@
 <script src="relacion2.js"></script>
 <body>
 
+<h1>Agenda</h1>
+<div style="width: 100%; display: inline-block; border: 1px solid black">
+    <h2>Introducir nuevo contacto</h2>
+    <form>
+        <label>
+            <a>Nombre: </a>
+            <input id="nombreHTML" type="text">
+        </label><br>
+
+        <label>
+            <a>Direccion: </a>
+            <input id="direccionHTML" type="text">
+        </label><br>
+
+        <label>
+            <a>Telefono: </a>
+            <input id="telefonoHTML" type="text">
+        </label><br>
+
+        <label>
+            <a>Email: </a>
+            <input id="emailHTML" type="text">
+        </label><br><hr>
+
+        <button onclick="miAgenda.introducirContacto()">Introducir nuevo contacto</button>
+    </form>
+</div>
+<div style="width: 100%; display: inline-block; border: 1px solid black;">
+    <h2>Mostrar todos</h2>
+    <button onclick="miAgenda.mostrarTodos()">Mostrar todos los contactos</button>
+    <div id="contactos"></div>
+</div>
+
 </body>
 </html>
