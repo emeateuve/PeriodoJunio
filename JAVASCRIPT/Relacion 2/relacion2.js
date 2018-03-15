@@ -31,13 +31,13 @@ class Agenda {
             if (this.contactos[i].nombre === nombre) {
                 encontrado = true;
                 document.getElementById('buscado').innerHTML =
-                    '<li>Nombre: ' +this.contactos[i].nombre +'</li>'+
-                    '<li>Direccion: '+this.contactos[i].direccion+'</li>'+
-                    '<li>Telefono: '+this.contactos[i].telefono+'</li>'+
-                    '<li>Email: '+this.contactos[i].email+'</li>';
+                    '<li>Nombre: ' + this.contactos[i].nombre + '</li>' +
+                    '<li>Direccion: ' + this.contactos[i].direccion + '</li>' +
+                    '<li>Telefono: ' + this.contactos[i].telefono + '</li>' +
+                    '<li>Email: ' + this.contactos[i].email + '</li>';
             }
         }
-        if(encontrado == false){
+        if (encontrado == false) {
             document.getElementById('buscado').innerText = 'Lo sentimos, no existe nadie con ese nombre.'
         }
 
@@ -60,7 +60,7 @@ class Agenda {
                 contactoBorrado = true;
             }
         }
-        if(contactoBorrado == false){
+        if (contactoBorrado == false) {
             document.getElementById('borrado').innerHTML = 'No se ha encontrado nadie con ese nombre.'
         }
     }
