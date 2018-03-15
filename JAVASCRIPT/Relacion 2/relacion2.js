@@ -1,7 +1,7 @@
 /* Ejercicios 3-4 */
 
-class Agenda{
-    constructor(){
+class Agenda {
+    constructor() {
         this.contactos = [];
         this.id = 0;
     };
@@ -17,25 +17,38 @@ class Agenda{
         this.id++
     }
 
-    mostrarContacto(nombre){
-        for (let i = 0; i < this.contactos.length; i++){
-            if (this.contactos[i].nombre === nombre){
+    mostrarContacto(nombre) {
+        for (let i = 0; i < this.contactos.length; i++) {
+            if (this.contactos[i].nombre === nombre) {
                 return this.contactos[i];
             }
         }
     }
 
-    mostrarTodos(){
-        for (let i = 0; i < this.contactos.length; i++){
-
+    mostrarTodos() {
+        let nombres = [];
+        for (let i = 0; i < this.contactos.length; i++) {
+            nombres.push(this.contactos[i].nombre);
         }
+        return nombres.sort();
     }
 
+    borrarContacto(nombre) {
+        for (let i = 0; i < this.contactos.length; i++) {
+            if (this.contactos[i].nombre === nombre) {
+                this.contactos.splice(i, 1)
+            }
+        }
+    }
 }
 
 let miAgenda = new Agenda;
-miAgenda.introducirContacto('Migue', 'Piso', '619619619', 'emeateuve@gmail.com')
-miAgenda.introducirContacto('Antonio', 'Casa', '666666666', 'antonio@gmail.com')
+
+miAgenda.introducirContacto('Migue', 'Piso', '619619619', 'emeateuve@gmail.com');
+miAgenda.introducirContacto('Antonio', 'Casa', '666666666', 'antonio@gmail.com');
+miAgenda.introducirContacto('Jose', 'PISO', '123123123', 'jose@gmail.com');
+miAgenda.introducirContacto('Pepe', 'Casa', '456456456', 'pepe@gmail.com');
 
 console.log(miAgenda.mostrarContacto('Migue'));
 console.log(miAgenda.mostrarTodos());
+console.log(miAgenda.borrarContacto('Migue'));
