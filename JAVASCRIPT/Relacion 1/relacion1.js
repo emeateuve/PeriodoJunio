@@ -24,7 +24,5 @@ function filtraPalabrasMayores(array, valor) {
     return devueltas;
 }
 
-
-
 console.log(max(numeros)); // Llamada ejercicio 3
-console.log(filtraPalabrasMayores(palabras, 5)) // Llamada ejercicio 8
+console.log(filtraPalabrasMayores(palabras, 5)); // Llamada ejercicio 8
