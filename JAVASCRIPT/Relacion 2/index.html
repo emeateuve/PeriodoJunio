@@ -38,11 +38,13 @@
             $('#emailHTML').val())">
     </form>
 </div>
+
 <div style="width: 100%; display: inline-block; border: 1px solid black;">
     <h2>Mostrar todos</h2>
     <input type="button" onclick="miAgenda.mostrarTodos()" value="Mostrar todos los contactos">
     <div id="contactos"></div>
 </div>
+
 <div style="width: 100%; display: inline-block; border: 1px solid black;">
     <h2>Borrar contacto</h2>
     <p>Introduce el contacto de quien quieres borar el nombre</p>
@@ -56,5 +58,17 @@
     </div>
 </div>
 
+<div>
+    <h2>Buscar contacto:</h2>
+    <p>Introduce el nombre que quieres buscar:</p>
+    <div id="buscar">
+        <label>
+            <a>Nombre a buscar: </a>
+            <input id="buscarHTML" type="text">
+        </label>
+        <input type="button" value="Buscar contacto" onclick="miAgenda.mostrarContacto($('#buscarHTML').val())">
+    </div>
+    <div id="buscado"></div>
+</div>
 </body>
 </html>

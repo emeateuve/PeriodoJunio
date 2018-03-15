@@ -26,11 +26,21 @@ class Agenda {
     }
 
     mostrarContacto(nombre) {
+        let encontrado = false;
         for (let i = 0; i < this.contactos.length; i++) {
             if (this.contactos[i].nombre === nombre) {
-                return this.contactos[i];
+                encontrado = true;
+                document.getElementById('buscado').innerHTML =
+                    '<li>Nombre: ' +this.contactos[i].nombre +'</li>'+
+                    '<li>Direccion: '+this.contactos[i].direccion+'</li>'+
+                    '<li>Telefono: '+this.contactos[i].telefono+'</li>'+
+                    '<li>Email: '+this.contactos[i].email+'</li>';
             }
         }
+        if(encontrado == false){
+            document.getElementById('buscado').innerText = 'Lo sentimos, no existe nadie con ese nombre.'
+        }
+
     }
 
     mostrarTodos() {
