@@ -7,7 +7,25 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="relacion5.js"></script>
 <body>
-<table>
+<div>
+    <label>
+        <a>Insertar fila en la posición:</a>
+        <input type="text" id="inputFila" placeholder="Escribe la posicion...">
+    </label>
+    <input type="button" onclick="insertarFila()" value="Insertar fila">
+</div>
+<hr>
+<div>
+    <label>
+        <a>Actualizar celda</a>
+        <input type="text" id="posicionFila" placeholder="Escribe la fila...">
+        <input type="text" id="posicionColumna" placeholder="Escribe la columna...">
+        <input type="text" id="posicionTexto" placeholder="Introduce el texto a cambiar...">
+    </label>
+    <input type="button" onclick="actualizarCelda()" value="Actualizar celda">
+</div>
+<hr>
+<table id="mitabla" border="1">
     <th>Lunes</th>
     <th>Martes</th>
     <th>Miercoles</th>
